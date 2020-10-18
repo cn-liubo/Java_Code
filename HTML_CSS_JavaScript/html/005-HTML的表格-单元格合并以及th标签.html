@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+	<head>
+		<title>表格单元格合并，以及th标签</title>
+	</head>
+	<body>
+		<!--注意事项
+			row合并的时候，删除“下面”的单元格
+			col合并的时候，对删除哪个没有要求
+		 -->
+		<table border="1px" width="50%">
+			
+			<tr>
+				<!-- 
+				<td>员工编号</td>
+				<td>员工薪资</td>
+				<td>部门名称</td> 
+				-->
+				<!-- th标签也是单元格标签，比td多得是字体居中、加粗 -->
+				<th>员工编号</th>
+				<th>员工薪资</th>
+				<th>部门名称</th>
+			</tr>
+			
+			<tr>
+				<td>1</td>
+				<td>1</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>b</td>
+				<td rowspan="2">c</td>
+			</tr>
+			<tr>
+				<td colspan="2">x</td>
+				
+				<!-- <td>y</td> -->
+				
+				<!-- <td>z</td> 去掉z-->
+			</tr>
+		</table>
+		
+	</body>
+</html>
