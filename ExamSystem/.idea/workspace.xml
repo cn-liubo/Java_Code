@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a94dd37c-469b-412c-93d3-821ba5448014" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1jieqLyvj7kDLBwYPl09xsvFs3a" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1602569845062" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.applicationServers" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\ExamSystem\src\img" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Test">
+    <configuration name="ExamFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="view.ExamFrame" />
+      <module name="ExamSystem" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.Test" />
+      <module name="ExamSystem" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.ExamFrame" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a94dd37c-469b-412c-93d3-821ba5448014" name="Default Changelist" comment="" />
+      <created>1597109837004</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597109837004</updated>
+      <workItem from="1597109841609" duration="272000" />
+      <workItem from="1597110245305" duration="4765000" />
+      <workItem from="1597118595860" duration="1718000" />
+      <workItem from="1597125767825" duration="6117000" />
+      <workItem from="1597190902523" duration="828000" />
+      <workItem from="1597193058380" duration="8759000" />
+      <workItem from="1597278931472" duration="9563000" />
+      <workItem from="1597365747397" duration="17385000" />
+      <workItem from="1597454623972" duration="6778000" />
+      <workItem from="1597465150029" duration="141000" />
+      <workItem from="1599616199702" duration="870000" />
+      <workItem from="1599640270640" duration="599000" />
+      <workItem from="1599717642260" duration="1922000" />
+      <workItem from="1600061125745" duration="710000" />
+      <workItem from="1600499495827" duration="863000" />
+      <workItem from="1600501471911" duration="27000" />
+      <workItem from="1600501566425" duration="627000" />
+      <workItem from="1600591949057" duration="175000" />
+      <workItem from="1602569718108" duration="143000" />
+      <workItem from="1604291530660" duration="148000" />
+      <workItem from="1604324927475" duration="37000" />
+      <workItem from="1604325443237" duration="1000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
