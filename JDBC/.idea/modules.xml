@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/01-提供jar包Java工程/01-提供jar包Java工程.iml" filepath="$PROJECT_DIR$/01-提供jar包Java工程/01-提供jar包Java工程.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01-第一个正式的网站/01-第一个正式的网站.iml" filepath="$PROJECT_DIR$/01-第一个正式的网站/01-第一个正式的网站.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02-通过jar包获得类文件帮助Java工程/02-通过jar包获得类文件帮助Java工程.iml" filepath="$PROJECT_DIR$/02-通过jar包获得类文件帮助Java工程/02-通过jar包获得类文件帮助Java工程.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03-CarFactory/03-CarFactory.iml" filepath="$PROJECT_DIR$/03-CarFactory/03-CarFactory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04-运动型汽车发动机研发商/04-运动型汽车发动机研发商.iml" filepath="$PROJECT_DIR$/04-运动型汽车发动机研发商/04-运动型汽车发动机研发商.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05-SUV型汽车发动机研发商/05-SUV型汽车发动机研发商.iml" filepath="$PROJECT_DIR$/05-SUV型汽车发动机研发商/05-SUV型汽车发动机研发商.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06-JDBC开发演示/06-JDBC开发演示.iml" filepath="$PROJECT_DIR$/06-JDBC开发演示/06-JDBC开发演示.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07-JDBC预编译/07-JDBC预编译.iml" filepath="$PROJECT_DIR$/07-JDBC预编译/07-JDBC预编译.iml" />
+      <module fileurl="file://$PROJECT_DIR$/10-JDBCUtil封装/08-JDBCUtil封装.iml" filepath="$PROJECT_DIR$/10-JDBCUtil封装/08-JDBCUtil封装.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08-JDBC事物控制/08-JDBC事物控制.iml" filepath="$PROJECT_DIR$/08-JDBC事物控制/08-JDBC事物控制.iml" />
+      <module fileurl="file://$PROJECT_DIR$/09-部门管理系统/09-部门管理系统.iml" filepath="$PROJECT_DIR$/09-部门管理系统/09-部门管理系统.iml" />
+      <module fileurl="file://$PROJECT_DIR$/11-JDBCDAO类封装/11-JDBCDAO类封装.iml" filepath="$PROJECT_DIR$/11-JDBCDAO类封装/11-JDBCDAO类封装.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JDBC演示/JDBC演示.iml" filepath="$PROJECT_DIR$/JDBC演示/JDBC演示.iml" />
+    </modules>
+  </component>
+</project>
