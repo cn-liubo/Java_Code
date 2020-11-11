@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="bjnode">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/02-通过jar包获得类文件帮助Java工程/bjnode.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
