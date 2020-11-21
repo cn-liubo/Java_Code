@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="bjnode">
+    <output-path>$PROJECT_DIR$/out/artifacts/bjnode</output-path>
+    <root id="archive" name="bjnode.jar">
+      <element id="module-output" name="01-提供jar包Java工程" />
+    </root>
+  </artifact>
+</component>
