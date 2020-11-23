@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="suv">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/03-CarFactory/suv.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
