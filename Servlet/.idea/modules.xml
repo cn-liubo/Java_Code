@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/01-第一个正式的网站/01-第一个正式的网站.iml" filepath="$PROJECT_DIR$/01-第一个正式的网站/01-第一个正式的网站.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02-Servlet接口实现类/02-Servlet接口实现类.iml" filepath="$PROJECT_DIR$/02-Servlet接口实现类/02-Servlet接口实现类.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03-Servlet的生命周期/03-Servlet的生命周期.iml" filepath="$PROJECT_DIR$/03-Servlet的生命周期/03-Servlet的生命周期.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_HttpServletResponse介绍/04-HttpServletResponse介绍.iml" filepath="$PROJECT_DIR$/04_HttpServletResponse介绍/04-HttpServletResponse介绍.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05-HttpServletRequest介绍/05-HttpServletRequest介绍.iml" filepath="$PROJECT_DIR$/05-HttpServletRequest介绍/05-HttpServletRequest介绍.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06-在线考试管理系统/06-在线考试管理系统.iml" filepath="$PROJECT_DIR$/06-在线考试管理系统/06-在线考试管理系统.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07-HttpStatus_302/07-HttpStatus_302.iml" filepath="$PROJECT_DIR$/07-HttpStatus_302/07-HttpStatus_302.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08-HttpStatus_405/08-HttpStatus_405.iml" filepath="$PROJECT_DIR$/08-HttpStatus_405/08-HttpStatus_405.iml" />
+      <module fileurl="file://$PROJECT_DIR$/09-HttpStatus_500/09-HttpStatus_500.iml" filepath="$PROJECT_DIR$/09-HttpStatus_500/09-HttpStatus_500.iml" />
+      <module fileurl="file://$PROJECT_DIR$/10-重定向解决方案/10-重定向解决方案.iml" filepath="$PROJECT_DIR$/10-重定向解决方案/10-重定向解决方案.iml" />
+      <module fileurl="file://$PROJECT_DIR$/11-请求转发解决方案/11-请求转发解决方案.iml" filepath="$PROJECT_DIR$/11-请求转发解决方案/11-请求转发解决方案.iml" />
+      <module fileurl="file://$PROJECT_DIR$/12-ServletContext介绍/12-ServletContext介绍.iml" filepath="$PROJECT_DIR$/12-ServletContext介绍/12-ServletContext介绍.iml" />
+      <module fileurl="file://$PROJECT_DIR$/13-Cookie/13-Cookie.iml" filepath="$PROJECT_DIR$/13-Cookie/13-Cookie.iml" />
+      <module fileurl="file://$PROJECT_DIR$/14-HttpSession/14-HttpSession.iml" filepath="$PROJECT_DIR$/14-HttpSession/14-HttpSession.iml" />
+      <module fileurl="file://$PROJECT_DIR$/15-HttpServletRequest实现数据共享/15-HttpServletRequest实现数据共享.iml" filepath="$PROJECT_DIR$/15-HttpServletRequest实现数据共享/15-HttpServletRequest实现数据共享.iml" />
+      <module fileurl="file://$PROJECT_DIR$/16-ServletContextListener/16-ServletContextListener.iml" filepath="$PROJECT_DIR$/16-ServletContextListener/16-ServletContextListener.iml" />
+      <module fileurl="file://$PROJECT_DIR$/17-ServletContextAttriubteListener/17-ServletContextAttriubteListener.iml" filepath="$PROJECT_DIR$/17-ServletContextAttriubteListener/17-ServletContextAttriubteListener.iml" />
+      <module fileurl="file://$PROJECT_DIR$/18-过滤器检测请求合法性/18-过滤器检测请求合法性.iml" filepath="$PROJECT_DIR$/18-过滤器检测请求合法性/18-过滤器检测请求合法性.iml" />
+      <module fileurl="file://$PROJECT_DIR$/19-过滤器对请求对象进行增强服务/19-过滤器对请求对象进行增强服务.iml" filepath="$PROJECT_DIR$/19-过滤器对请求对象进行增强服务/19-过滤器对请求对象进行增强服务.iml" />
+      <module fileurl="file://$PROJECT_DIR$/20_JSP文件使用展示/20_JSP文件使用展示.iml" filepath="$PROJECT_DIR$/20_JSP文件使用展示/20_JSP文件使用展示.iml" />
+      <module fileurl="file://$PROJECT_DIR$/21_JSP文件Java命令书写规则/21_JSP文件Java命令书写规则.iml" filepath="$PROJECT_DIR$/21_JSP文件Java命令书写规则/21_JSP文件Java命令书写规则.iml" />
+      <module fileurl="file://$PROJECT_DIR$/22_JSP文件内置Java对象/22_JSP文件内置Java对象.iml" filepath="$PROJECT_DIR$/22_JSP文件内置Java对象/22_JSP文件内置Java对象.iml" />
+      <module fileurl="file://$PROJECT_DIR$/23_Servlet与JSP联合调用案例/23_Servlet与JSP联合调用案例.iml" filepath="$PROJECT_DIR$/23_Servlet与JSP联合调用案例/23_Servlet与JSP联合调用案例.iml" />
+      <module fileurl="file://$PROJECT_DIR$/24_JSP文件调用原理分析/24_JSP文件调用原理分析.iml" filepath="$PROJECT_DIR$/24_JSP文件调用原理分析/24_JSP文件调用原理分析.iml" />
+    </modules>
+  </component>
+</project>
