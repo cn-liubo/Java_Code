@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liu.dao.StudentDao">
+
+    <select id="selectStudentById" resultType="com.liu.domain.Student">
+        select id,name,email,age from student where id=#{id}
+    </select>
+
+    <!--多个参数，使用@Parma命名-->
+    <select id="selectMultiParam" resultType="com.liu.domain.Student">
+        select id,name,email,age from student where name=#{myname} or age=#{myage}
+    </select>
+
+
+    <!--selectStudentReturnViewStudent-->
+    <select id="selectStudentReturnViewStudent" resultType="com.liu.vo.ViewStudent">
+        select id,name,email,age from student where id=#{sid}
+    </select>
+
+
+    <!--sql执行后返回一行一列-->
+    <!--<select id="countStudent" resultType="int">-->
+    <select id="countStudent" resultType="java.lang.Integer">
+        select count(*) from student
+    </select>
+
+
+    <!--返回Map
+        1）列名是map的key，列值是map的value
+        2）只能返回一行记录，多余一行错误
+    -->
+    <select id="selectMapById" resultType="java.util.HashMap">
+        select id,name,email from student where id=#{stuid}
+    </select>
+
+
+    <!--使用resultMap
+        1)先定义resultMap
+        2）在select标签中，使用resultMap来引用1中的定义
+    -->
+    <!--定义resultMap
+        id：自定义名称，表示你定义的这个resultMap
+        type：java类型的权限定名称
+    -->
+    <resultMap id="studentMap" type="com.liu.domain.Student">
+        <!--列名和java属性的关系-->
+        <!--主键列，适用id标签
+            column：列名
+            property：java类型的属性名
+        -->
+        <id column="id" property="id"/>
+        <!--非主键列，适用result标签-->
+        <result column="name" property="name"/>
+        <result column="email" property="email"/>
+        <result column="age" property="age"/>
+    </resultMap>
+    <select id="selectAllStudent" resultMap="studentMap">
+        select id,name,email,age from student
+    </select>
+
+
+    <resultMap id="myStudentMap" type="com.liu.domain.MyStudent">
+        <!--列名和java属性的关系-->
+        <id column="id" property="stuId"/>
+        <!--非主键列，适用result标签-->
+        <result column="name" property="stuName"/>
+        <result column="email" property="stuEmail"/>
+        <result column="age" property="stuAge"/>
+    </resultMap>
+    <!--第一种方式：列名和属性名不一致-->
+    <select id="selectMyStudent" resultMap="myStudentMap">
+        select id,name,email,age from student
+    </select>
+
+    <!--第二种方式：列名和属性名不一致
+        resultType的默认原则是：同名的列值赋值给同名的属性，使用列别名（java对象的属性名）
+    -->
+    <select id="selectDiffCOlProperty" resultType="com.liu.domain.MyStudent">
+        select id as stuId,name as stuName,email as stuEmail,age as stuAge from student
+    </select>
+
+
+    <!--第一种： like，java代码中指定 like 的内容-->
+    <select id="selectLikeOne" resultType="com.liu.domain.Student">
+        select id,name,email,age from student where name like #{name}
+    </select>
+
+    <!--第二种：在mapper文件中拼接 like 的内容-->
+    <select id="selectLikeTwo" resultType="com.liu.domain.Student">
+        select id,name,email,age from student where name like "%" #{name} "%"
+    </select>
+</mapper>
