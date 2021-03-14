@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!--settings：控制mybatis全局行为-->
+    <settings>
+        <!--设置mybatis输出日志-->
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+
+    <!--定义别名-->
+    <typeAliases>
+        <!--
+        第一种方式:可以指定一个类型一个自定义别名
+            type：是自定义类型的全限定名称
+            alias：是自定义别名
+        -->
+        <!--<typeAlias type="com.liu.domain.Student" alias="stu"/>
+        <typeAlias type="com.liu.vo.ViewStudent" alias="vstu"/>-->
+
+
+        <!--
+        第二种方式：
+        <package> name是包名，这个包中的所有类，类名就是别名（类名不区分大小写）
+        -->
+<!--        <package name="com.liu.domain"/>-->
+<!--        <package name="com.liu.vo"/>-->
+    </typeAliases>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/bjpowernode"/>
+                <property name="username" value="root"/>
+                <property name="password" value="123456"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!--sql mapper（sql映射文件）的位置-->
+    <mappers>
+        <!--一个mapper表示指定一个文件的位置，从类路径开始的路径信息  target/classes(类路径)-->
+        <mapper resource="com/liu/dao/StudentDao.xml"/>
+    </mappers>
+</configuration>
