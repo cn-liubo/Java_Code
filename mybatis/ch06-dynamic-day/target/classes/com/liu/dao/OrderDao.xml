@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liu.dao.OrderDao">
+
+    <!--定义sql的片段-->
+    <sql id="studentId">
+        select id,name,age,email from student
+    </sql>
+
+    <!--if
+        <if test="使用参数java对象的属性值作为判断条件，语法 属性名=xxx值"></if>
+    -->
+    <select id="selectStudentIf" resultType="com.liu.domain.Student">
+        select id,name,age,email from student
+
+        where id > 0
+        <if test="name != null and name != '' ">
+            and name = #{name}
+        </if>
+        <if test="age > 0">
+            and age > #{age}
+        </if>
+    </select>
+
+
+    <!--where
+        <where> <if> </if> ... </where>
+    -->
+    <select id="selectStudentWhere" resultType="com.liu.domain.Student">
+--         select id,name,email,age from student
+        <include refid="studentId"/>
+        <where>
+            <if test="name != null and name != '' ">
+                name = #{name}
+            </if>
+            <if test="age > 0">
+                and age > #{age}
+            </if>
+        </where>
+    </select>
+
+
+    <!--foreach
+        collection：表示接口中的方法参数的类型，如果是数组使用array，如果是list集合使用list
+        item：自定义的，表示数组和集合成员的变量
+        open：循环开始时的字符
+        close：循环结束时的字符
+        separator：集合成员之间的分隔符
+    -->
+    <!--用法1：List<Integer>-->
+    <select id="selectForEachOne" resultType="com.liu.domain.Student">
+--         select * from student where id in
+        <include refid="studentId"/> where id in
+        <foreach collection="list" item="myId" open="(" close=")" separator=",">
+            #{myId}
+        </foreach>
+    </select>
+    <!--用法2：List<Student>-->
+    <!--<select id="selectForEachTwo" resultType="com.liu.domain.Student">
+        select * from student where id in
+        <foreach collection="list" item="stu" open="(" close=")" separator=",">
+            #{stu.id}
+        </foreach>
+    </select>-->
+    <select id="selectForEachTwo" resultType="com.liu.domain.Student">
+        select * from student where id in (
+        <foreach collection="list" item="stu">
+            #{stu.id} ,
+        </foreach>
+        -1)
+    </select>
+</mapper>
