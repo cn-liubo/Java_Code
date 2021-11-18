@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>博客首页</title>
+</head>
+<body>
+    <div id="app">
+        <h2>cn博客</h2>
+        <!-- js里边if判断可以用任意类型，和java有点不同 -->
+        <a v-if="user.username" href="my_articles.html">个人博客</a>
+        <a v-if="!user.username" href="login.html">登录</a>
+        <!-- 自行尝试完成注销功能，前端后端：TODO -->
+        <ul>
+            <li v-for="article in articles">
+                {{ article.title }}
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                user:{
+                    // username: "小比特"
+                },
+                articles: [
+                //     {
+                //     id: 1,
+                //     title: "第一篇",
+                //     content: "html",
+                // }, {
+                //     id: 2,
+                //     title: "第2篇",
+                //     content: "js",
+                // }
+                ],
+            },
+            methods: {
+
+            },
+            created: function () {
+                let vm = this;
+                axios.get(
+                    "/api/article/query"
+                ).then(function (resp) {//状态码200进入，resp包含状态码，header，body
+                    //响应体数据：resp.data，为后端统一封装的格式
+                    console.log(resp)
+                    // console.log(JSON.stringify(resp))
+
+                    let data = resp.data;
+                    if(data.ok){//业务操作成功
+                        vm.user = data.data.user || {};//如果||前没有值，就用后边的赋值
+                        vm.articles = data.data.articles;
+                    }
+                }).catch(function (err) {
+                    alert("出错了\n"+JSON.stringify(err))
+                });
+            }
+        })
+    </script>
+</body>
+</html>

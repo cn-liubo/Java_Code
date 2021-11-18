@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cn博客登录</title>
+</head>
+<body>
+    <div id="app">
+        <h2>用户登录</h2>
+        用户名：<input type="text" v-model="username"><br>
+        密码：<input type="password" v-model="password"><br>
+        <button @click="login()">登录</button>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            username: "",
+            password: ""
+        },
+        methods: {
+            login: function () {
+                // alert("username="+this.username+", password="+this.password)
+                //发送ajax请求，登录
+                let vm = this;
+                axios.post(
+                    //请求的url
+                    "/api/user/login",
+                    //请求数据：get请求当然是url，post默认的数据类型是application/json
+                    {
+                        username: vm.username,
+                        password: vm.password
+                    }
+                ).then(function (resp) {//状态码200进入，resp包含状态码，header，body
+                    //响应体数据：resp.data，为后端统一封装的格式，可以看Response属性
+                    console.log(resp)
+                    let data = resp.data;
+                    if(data.ok){//业务操作成功
+                        window.location.href = "index.html";
+                    }else{//后端抛异常，我们还是返回200状态，通过ok字段标识
+                        alert("错误码："+data.code+"\n错误信息："+data.msg);
+                    }
+
+                }).catch(function (err) {
+                    alert("出错了\n"+JSON.stringify(err))
+                });
+            }
+        }
+    })
+</script>
+</body>
+</html>

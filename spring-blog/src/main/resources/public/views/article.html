@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人文章</title>
+</head>
+<body>
+    <div id="app">
+        标题：<input type="text" v-model="title" style="width: 500px"><br><br>
+        内容：<textarea v-model="content"></textarea><br><br>
+        <button @click="submitArticle()">提交</button>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    function urlQuery() {
+        let query = {};
+        // 获取url中?后的字符串：type=edit&id=1
+        let queryStringArray = window.location.search.substring(1).split("&");
+        for(let i=0; i<queryStringArray.length; i++){
+            let cur = queryStringArray[i].split("=");//type, edit
+            query[cur[0]] = cur[1];
+        }
+        return query;
+    }
+    new Vue({
+        el: "#app",
+        data: {
+            id: "",
+            type: "",
+            title: "",
+            content: "",
+        },
+        methods: {
+            //提交文章：需要根据type决定是新增还是修改（请求发送的url和数据是不同的）
+            submitArticle: function () {
+                let url = "/api/article/" + this.type;
+                let query = {
+                    title: this.title,
+                    content: this.content,
+                }
+                if(this.type == "edit") query.id = this.id;
+                //ajax提交文章数据
+                axios.post(
+                    url, query
+                ).then(function (resp) {
+                    let data = resp.data;
+                    if(data.ok){//业务操作成功
+                        alert("操作成功")
+                    }else{//后端抛异常，我们还是返回200状态，通过ok字段标识
+                        alert("错误码："+data.code+"\n错误信息："+data.msg);
+                    }
+                }).catch(function (err) {
+                    alert("出错了\n"+JSON.stringify(err))
+                })
+            }
+        },
+        created: function () {
+            //跳转到本页面时，需要解析url中的数据：type，id(修改时有)
+            //1. 获取url中的type，id
+            let query = urlQuery();
+            //设置网页标题
+            document.title = '个人博客' + (query.type == 'add' ? '新增' : '修改');
+            //2. 设置值到vue实例的属性中
+            this.id = query.id;
+            this.type = query.type;
+            let vm = this;
+            //3. 如果是修改操作，需要在初始化时根据文章id查询文章信息
+            if(this.type == 'edit'){
+                axios.get(
+                    "/api/article/query/"+query.id
+                ).then(function (resp) {
+                    //如果不知道某个对象有哪些属性，可以打印出来看看再写
+                    //多用打印技巧
+                    console.log(resp)
+                    console.log(JSON.stringify(resp))
+                    //获取响应体内容：后端封装统一格式
+                    let data = resp.data;
+                    if(data.ok){//业务操作成功
+                        // alert("操作成功")
+                        //4. 查询到的文章信息，设置title，content到vue属性
+                        vm.title = data.data.title;
+                        vm.content = data.data.content;
+                    }else{//后端抛异常，我们还是返回200状态，通过ok字段标识
+                        alert("错误码："+data.code+"\n错误信息："+data.msg);
+                    }
+                }).catch(function (err) {
+                    alert("出错了\n"+JSON.stringify(err))
+                })
+            }
+        }
+    })
+</script>
+</body>
+</html>

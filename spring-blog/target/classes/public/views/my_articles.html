@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人博客文章</title>
+</head>
+<body>
+<div id="app">
+    <button v-on:click="addArticle()">新增</button>
+    <ul>
+        <li v-for="article in articles">
+            {{ article.title }}
+            <button v-on:click="editArticle(article.id)">修改</button>
+            <button v-on:click="deleteArticle(article.id)">删除</button>
+        </li>
+    </ul>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            articles: [{
+                id: 1,
+                title: "第一篇",
+                content: "html",
+            }, {
+                id: 2,
+                title: "第2篇",
+                content: "js",
+            }],
+        },
+        methods: {
+            /**
+             * 跳转到article.html页面：
+             * 1. 新增直接跳转
+             * 2. 修改时，跳转后的页面需要获取文章id
+             * 以上两个操作，跳转后需要知道操作类型
+             *
+             * 实现方案可以考虑：
+             * 1. 使用url携带数据，跳转后的页面从js获取url中的数据
+             *    (我们这里是按钮点击事件，js代码跳转，也可以把按钮改为链接)
+             * 2. 使用js内置对象localStorage.setItem(String, 对象)
+             *                 localStorage.getItem(String)
+             */
+            addArticle: function(){
+                window.location.href = "article.html?type=add";
+            },
+            editArticle: function(id){
+                window.location.href = "article.html?type=edit&id="+id;
+            },
+            deleteArticle: function (id) {
+                // 删除文章 TODO
+                alert(id)
+            }
+        }
+        // 页面初始化时，需要加载个人博客列表数据，填充到网页：类似首页 TODO
+    })
+</script>
+</body>
+</html>
